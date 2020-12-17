@@ -5,16 +5,34 @@
   font-family: Arial;
 }
 
-header,
-footer {
-  height: 100px;
-  background-color: #222;
-}
-
 .container {
   width: 900px;
   height: 100%;
   margin: 0 auto;
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  /* background-color: red; */
+}
+
+header {
+  background-color: #222;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .choise {
+  /* background-color: blue; */
+}
+
+header h1 {
+  background-color: red;
 }
 
 .cards-container {
@@ -49,3 +67,7 @@ footer {
   align-items: center;
 }
 
+footer {
+  height: 50px;
+  background-color: #222;
+}
