@@ -1,5 +1,5 @@
 <?php
- include 'dischi_php.php';
+ include 'dischi.php';
 ?>
 
 <!DOCTYPE html>
@@ -22,12 +22,19 @@
                 <label for="php">PHP</label>
                 <input type="radio" name="call" value="ajax">
                 <label for="ajax">AJAX</label>
+                <select name="genre">
+                    <option value="">Tutti</option>
+                    <option value="Rock">Rock</option>
+                    <option value="Pop">Pop</option>
+                    <option value="Jazz">Jazz</option>
+                    <option value="Metal">Metal</option>
+                </select>
             </div>
         </header>
         <main>
             <div class="container">
                 <div class="cards-container" id="php">
-                <?php  foreach ($dischi as $key => $value) {?>
+                <?php  foreach ($dischi_filtrati as $key => $value) {?>
                     <div class="card">
 
                         <div class="card-top">
@@ -64,6 +71,6 @@
         <footer>
 
         </footer>
-        <script src="main.js" charset="utf-8"></script>
+        <script src="src/app.js" charset="utf-8"></script>
     </body>
 </html>
